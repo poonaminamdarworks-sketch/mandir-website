@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shri Vardaan Devi Someshwar Mandir</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:#faf9f6;
+  color:#222;
+}
+
+/* HEADER */
+header {
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  z-index:1000;
+}
+
+nav a {
+  margin:0 10px;
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+}
+
+/* HERO */
+.hero {
+  height:90vh;
+  background:url('images/mandir-reconstruction/mandir-1.jpg') center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-box {
+  background:rgba(0,0,0,0.6);
+  padding:30px;
+  border-radius:12px;
+  color:white;
+  text-align:center;
+}
+
+.section {
+  padding:80px 40px;
+}
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:white;
+  border-radius:12px;
+  padding:10px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+}
+
+.grid img {
+  width:100%;
+  border-radius:10px;
+}
+
+/* BUTTON */
+button {
+  padding:10px 20px;
+  border:none;
+  border-radius:25px;
+  background:#6e200c;
+  color:white;
+  cursor:pointer;
+}
+
+/* FILTER */
+.filter-btn {
+  margin:5px;
+  padding:8px 15px;
+  border-radius:20px;
+  border:1px solid #6e200c;
+  background:white;
+  cursor:pointer;
+}
+
+/* ANIMATION */
+.fade {
+  animation:fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+.testimonial {
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+
+.lang-toggle {
+  cursor:pointer;
+  border:1px solid #ccc;
+  padding:5px 10px;
+  border-radius:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div><strong>Mandir</strong></div>
+<nav>
+<a href="#about">About</a>
+<a href="#series">Series</a>
+<a href="#gallery">Gallery</a>
+<a href="#community">Community</a>
+</nav>
+<div class="lang-toggle" onclick="toggleLang()">EN / मराठी</div>
+</header>
+
+<!-- HERO -->
+
+<div class="hero">
+<div class="hero-box">
+<h1 data-en="Shri Vardaan Devi Someshwar Mandir"
+data-mr="श्री वरदान देवी सोमेश्वर मंदिर">
+Shri Vardaan Devi Someshwar Mandir
+</h1>
+<p>Sangve, Ratnagiri</p>
+</div>
+</div>
+
+<!-- ABOUT -->
+
+<div class="section fade" id="about">
+<h2>About</h2>
+<p data-en="A sacred temple representing faith, tradition and community."
+data-mr="श्रद्धा, परंपरा आणि एकतेचे प्रतीक असलेले पवित्र मंदिर.">
+A sacred temple representing faith, tradition and community.
+</p>
+</div>
+
+<!-- SERIES -->
+
+<div class="section fade" id="series">
+<h2>Web Series</h2>
+
+<iframe width="100%" height="350"
+src="https://www.youtube.com/embed/F_0_-9wPaSo"></iframe>
+
+<div class="grid">
+
+<div class="card">
+<iframe width="100%" height="200"
+src="https://www.youtube.com/embed/-pOc4yn_Bq4"></iframe>
+<p>Episode 1</p>
+</div>
+
+<div class="card">
+<iframe width="100%" height="200"
+src="https://www.youtube.com/embed/LBw-LsHbmIE"></iframe>
+<p>Episode 2</p>
+</div>
+
+</div>
+</div>
+
+<!-- GALLERY -->
+
+<div class="section fade" id="gallery">
+<h2>Gallery</h2>
+
+<div>
+<button class="filter-btn" onclick="filter('all')">All</button>
+<button class="filter-btn" onclick="filter('mandir')">Mandir</button>
+<button class="filter-btn" onclick="filter('event')">Events</button>
+</div>
+
+<div class="grid" id="galleryGrid">
+
+<script>
+for(let i=1;i<=10;i++){
+document.write(`
+<div class="card mandir">
+<img src="images/mandir-reconstruction/mandir-${i}.jpg">
+</div>
+`)
+}
+</script>
+
+</div>
+
+<a href="https://drive.google.com/drive/folders/1AycNRJzbg3zPpchnebPqy4nMaCrovLBM?usp=sharing" target="_blank">
+<button style="margin-top:20px;">View All</button>
+</a>
+
+</div>
+
+<!-- COMMUNITY -->
+
+<div class="section fade" id="community">
+<h2>Community</h2>
+
+<div class="grid">
+<div class="card">
+<img src="community/placeholder.jpg" style="border-radius:50%;">
+<p>श्री. प्रदीप भिकाजी शेलार</p>
+</div>
+
+<div class="card">
+<img src="community/placeholder.jpg" style="border-radius:50%;">
+<p>श्री. संजय आत्माराम शेलार</p>
+</div>
+</div>
+
+<h3>Testimonials</h3>
+
+<div class="testimonial">
+<p>मंदिर जिर्णोद्धार हा श्रद्धा आणि एकतेचे प्रतीक आहे.</p>
+</div>
+
+<div class="testimonial">
+<p>समाज अधिक एकत्र आला आहे.</p>
+</div>
+
+</div>
+
+<script>
+function toggleLang(){
+document.querySelectorAll('[data-en]').forEach(el=>{
+el.innerText = el.innerText === el.getAttribute('data-en')
+? el.getAttribute('data-mr')
+: el.getAttribute('data-en');
+});
+}
+
+function filter(type){
+let items=document.querySelectorAll('#galleryGrid .card');
+items.forEach(i=>{
+if(type==='all'){i.style.display='block'}
+else{
+i.style.display=i.classList.contains(type)?'block':'none'
+}
+})
+}
+</script>
+
+</body>
+</html>
